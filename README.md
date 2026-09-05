@@ -5,11 +5,12 @@
 ## 這個 repo 有什麼
 
 ```
+├─ example/            五分鐘跑一次的示範（先做這個）
 ├─ tutorial/           教學文件：從零開始學會這套流程
 └─ repo-template/      專案骨架：直接複製到你的新專案
 ```
 
-- **第一次接觸** → 從 [`tutorial/README.md`](tutorial/README.md) 開始讀
+- **第一次接觸** → 先跑 [`example/`](example/)，再讀 [`tutorial/README.md`](tutorial/README.md)
 - **已經懂流程、要開新專案** → 直接複製 [`repo-template/`](repo-template/)
 
 ## 核心概念
