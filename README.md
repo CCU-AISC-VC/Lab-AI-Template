@@ -1,53 +1,44 @@
-# <專案名稱>
+# Lab AI Template
 
-一句話說明這個 repo 在做什麼。
+給研究室使用的 AI agent 工作流程模板。目的是讓 agent 產出的結果**可重現、可檢查、可交接**，而不是一次性的對話。
 
-## 這個 repo 是什麼
+## 這個 repo 有什麼
 
-- 研究題目：
-- 負責人：
-- 起訖時間：
+```
+├─ tutorial/           教學文件：從零開始學會這套流程
+└─ repo-template/      專案骨架：直接複製到你的新專案
+```
 
-## 怎麼跑一次
+- **第一次接觸** → 從 [`tutorial/README.md`](tutorial/README.md) 開始讀
+- **已經懂流程、要開新專案** → 直接複製 [`repo-template/`](repo-template/)
+
+## 核心概念
+
+這套模板建立在三件事上：
+
+1. **Plan-first**：任何任務先寫 PLAN，人審過才動手寫程式。
+2. **規格外置**：單位、座標系、感測器設定寫在 `SPEC.md`，agent 不准自行假設。
+3. **強制驗證**：每次數值產出都要跑物理合理性檢查（單位、數量級、守恆、極端情況）。
+
+## 快速開始
 
 ```bash
-# 環境
-pip install -r requirements.txt
+# 1. 複製骨架到你的新專案
+cp -r repo-template/ ../my-project
+cd ../my-project
+git init
 
-# 執行主要分析，產生 results/figures/ 底下的圖
-python scripts/2026-09-02_modal_analysis.py
+# 2. 填寫這三份檔案的空白處
+#    instructions.md  專案基本資訊、技術環境
+#    SPEC.md          單位、座標系、感測器、資料格式
+#    README.md        專案說明
+
+# 3. 讓 AI agent 讀規則後開工
+#    Claude Code 會自動讀 CLAUDE.md，其他工具見 tutorial/01_setup.md
 ```
 
-## 資料在哪
+完整步驟見 [`tutorial/02_start_project.md`](tutorial/02_start_project.md)。
 
-原始量測資料**不放在 git**（檔案太大）。
+## 適用對象
 
-- 位置：`\\lab-nas\projects\<專案名>\raw\` 或 OneDrive 連結
-- 下載後放到 `data/raw/`
-- 資料格式、單位、感測器設定見 [`SPEC.md`](SPEC.md)
-
-## 資料夾說明
-
-```
-├─ instructions.md     給 AI agent 的常駐規則（開工前先讀）
-├─ SPEC.md             單位、座標系、資料格式、感測器規格
-├─ DEVLOG.md           開發流水帳
-├─ plans/              每個任務的規劃檔
-├─ data/
-│   ├─ raw/            原始資料（唯讀，不進 git）
-│   └─ processed/      處理後資料
-├─ src/                可重複使用的函式
-├─ scripts/            一次性執行腳本
-└─ results/
-    ├─ figures/
-    └─ tables/
-```
-
-## 給 AI agent 使用者
-
-本 repo 採用 plan-first 流程。使用任何 AI coding agent 前，請先讓它讀 [`instructions.md`](instructions.md)：
-
-- **Claude Code**：`CLAUDE.md` 內已指向，直接開始即可
-- **GitHub Copilot**：`.github/copilot-instructions.md` 內已指向
-- **Cursor**：`.cursor/rules/main.mdc` 內已指向
-- **網頁版 ChatGPT / Gemini**：把 `instructions.md` 整份貼在對話第一則訊息
+實驗數據分析、數值模擬、訊號處理類的研究專案。範例以結構動力量測為主，但流程本身與領域無關。

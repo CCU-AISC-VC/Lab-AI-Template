@@ -29,18 +29,20 @@ python scripts/2026-09-02_modal_analysis.py
 ## 資料夾說明
 
 ```
+├─ CLAUDE.md           Claude Code 的規則指向檔
 ├─ instructions.md     給 AI agent 的常駐規則（開工前先讀）
 ├─ SPEC.md             單位、座標系、資料格式、感測器規格
 ├─ DEVLOG.md           開發流水帳
-├─ plans/              每個任務的規劃檔
+├─ requirements.txt    Python 套件
+├─ plans/              每個任務的規劃檔（範本：PLAN_template.md）
 ├─ data/
 │   ├─ raw/            原始資料（唯讀，不進 git）
-│   └─ processed/      處理後資料
+│   └─ processed/      處理後資料（不進 git）
 ├─ src/                可重複使用的函式
 ├─ scripts/            一次性執行腳本
 └─ results/
-    ├─ figures/
-    └─ tables/
+    ├─ figures/        圖檔，300 dpi，座標軸須標單位
+    └─ tables/         表格 CSV
 ```
 
 ## 給 AI agent 使用者
