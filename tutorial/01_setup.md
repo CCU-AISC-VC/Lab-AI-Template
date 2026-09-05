@@ -33,11 +33,15 @@ Settings → GitHub Copilot → Use Instruction Files ✓
 
 已附 `.cursor/rules/main.mdc`，開啟專案即生效。
 
-### 網頁版 ChatGPT / Gemini / Claude
+### Chat 介面（網頁版或 Desktop 的對話視窗、ChatGPT、Gemini）
 
 沒有規則檔機制，只能手動：**把 `instructions.md` 整份貼在對話的第一則訊息**，接著貼 `SPEC.md`，然後才開始講你要做什麼。
 
 換新對話就要重貼一次。這也是為什麼建議用有規則檔機制的工具。
+
+> ⚠️ **不貼就等於沒有規則。** 用 chat 的時候「不得修改 `data/raw/`」「不得產生假資料」
+> 「規劃階段不得寫程式碼」這些全部不會生效 —— **「我有用 Claude」不等於「有照實驗室的規則跑」。**
+> 哪些介面會自動讀規則、哪些不會，見 [`09_claude_surfaces.md`](09_claude_surfaces.md)。
 
 ## 驗證有沒有生效
 
