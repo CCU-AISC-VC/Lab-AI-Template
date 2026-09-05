@@ -6,6 +6,8 @@
 
 ## 閱讀順序
 
+### A. 分析流程（全實驗室，照順序讀）
+
 | # | 文件 | 內容 |
 |---|---|---|
 | 0 | [`00_why.md`](00_why.md) | 為什麼需要這套流程？不用會出什麼事 |
@@ -14,6 +16,17 @@
 | 3 | [`03_first_task.md`](03_first_task.md) | 跑完第一個 plan-first 任務（三階段） |
 | 4 | [`04_verification.md`](04_verification.md) | 物理合理性檢查怎麼做才有效 |
 | 5 | [`05_faq.md`](05_faq.md) | 常見狀況與排錯 |
+
+### B. 版本控制（全實驗室，可獨立閱讀）
+
+| # | 文件 | 內容 |
+|---|---|---|
+| 6 | [`06_git_basics.md`](06_git_basics.md) | Git 基礎：pull、push、commit、什麼不能進 git |
+| 7 | [`07_agent_git.md`](07_agent_git.md) | 讓 AI agent 幫你操作 git，以及不能交給它的事 |
+| 8 | [`08_organization.md`](08_organization.md) | Organization、Fork、PR 協作 —— **📌 博士班與各組組長閱讀，organization 由各組自行開設管理** |
+
+沒碰過 git 的人：先讀 6，再讀 7，就足夠日常工作。
+第 8 章是多人協作才需要的架構，由各小組組長決定何時導入。
 
 ## 三份核心檔案
 
